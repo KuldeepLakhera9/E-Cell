@@ -73,6 +73,13 @@ export const TEAM: TeamMember[] = [
     linkedin: "https://linkedin.com",
   },
   {
+    name: "Tejas Eklare",
+    role: "Design and Marketing Lead",
+    category: "Leads",
+    photo: "/team/tejas-eklare.jpg",
+    linkedin: "https://linkedin.com",
+  },
+  {
     name: "Meera Joshi",
     role: "Marketing Lead",
     category: "Leads",
