@@ -51,11 +51,26 @@ export const TEAM: TeamMember[] = [
     instagram: "https://www.instagram.com/kuldeeplakhera_/",
   },
   {
-    name: "Aditya Shinde",
-    role: "Events Lead",
+    name: "Shravani Sanas",
+    role: "Event Management Lead",
     category: "Leads",
+    photo: "/team/shravani-sanas.jpg",
     linkedin: "https://linkedin.com",
     instagram: "https://instagram.com",
+  },
+  {
+    name: "Priyanka Pawar",
+    role: "Content and Research Lead",
+    category: "Leads",
+    photo: "/team/priyanka-pawar.jpg",
+    linkedin: "https://linkedin.com",
+  },
+  {
+    name: "Anand Kale",
+    role: "PR Lead",
+    category: "Leads",
+    photo: "/team/anand-kale.jpg",
+    linkedin: "https://linkedin.com",
   },
   {
     name: "Meera Joshi",
