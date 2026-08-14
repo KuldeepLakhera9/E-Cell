@@ -8,13 +8,14 @@ import Avatar from "@/components/ui/Avatar";
 import FilterTabs from "@/components/ui/FilterTabs";
 import { TEAM, type TeamCategory } from "@/data/team";
 
-const FILTERS = ["All", "Core Team", "Leads", "Volunteers"] as const satisfies readonly (
-  | TeamCategory
-  | "All"
-)[];
-
 export default function Team() {
-  const [activeFilter, setActiveFilter] = useState<(typeof FILTERS)[number]>("All");
+  const availableFilters = useMemo(() => {
+    const categories = Array.from(new Set(TEAM.map((m) => m.category)));
+    if (categories.length <= 1) return [] as string[];
+    return ["All", ...categories];
+  }, []);
+
+  const [activeFilter, setActiveFilter] = useState<string>("All");
 
   const filteredTeam = useMemo(
     () => (activeFilter === "All" ? TEAM : TEAM.filter((m) => m.category === activeFilter)),
@@ -31,14 +32,16 @@ export default function Team() {
           description="A student-run team of builders, organizers, and connectors driving E-Cell VPKBIET forward."
         />
 
-        <div className="mt-12 flex justify-center">
-          <FilterTabs
-            options={FILTERS}
-            active={activeFilter}
-            onChange={setActiveFilter}
-            layoutId="team-filter-pill"
-          />
-        </div>
+        {availableFilters.length > 1 && (
+          <div className="mt-12 flex justify-center">
+            <FilterTabs
+              options={availableFilters}
+              active={activeFilter}
+              onChange={setActiveFilter}
+              layoutId="team-filter-pill"
+            />
+          </div>
+        )}
 
         <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
           <AnimatePresence mode="popLayout">
