@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0A0908" />
-      <stop offset="1" stop-color="#120E0A" />
+      <stop offset="0" stop-color="#FAF8F4" />
+      <stop offset="1" stop-color="#F3EEE6" />
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#E08A63" />
-      <stop offset="1" stop-color="#9C4A2F" />
+      <stop offset="0" stop-color="#B85C3E" />
+      <stop offset="1" stop-color="#7A3A24" />
     </linearGradient>
     <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 100) scale(500)">
-      <stop offset="0" stop-color="#D97757" stop-opacity="0.16" />
-      <stop offset="1" stop-color="#D97757" stop-opacity="0" />
+      <stop offset="0" stop-color="#9C4A2F" stop-opacity="0.08" />
+      <stop offset="1" stop-color="#9C4A2F" stop-opacity="0" />
     </radialGradient>
     <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1000 550) scale(500)">
-      <stop offset="0" stop-color="#9C4A2F" stop-opacity="0.16" />
-      <stop offset="1" stop-color="#9C4A2F" stop-opacity="0" />
+      <stop offset="0" stop-color="#7A3A24" stop-opacity="0.08" />
+      <stop offset="1" stop-color="#7A3A24" stop-opacity="0" />
     </radialGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)" />
   <rect width="1200" height="630" fill="url(#glow1)" />
   <rect width="1200" height="630" fill="url(#glow2)" />
-  <rect x="80" y="80" width="64" height="64" rx="16" fill="#15110D" stroke="url(#accent)" stroke-width="2" />
+  <rect x="80" y="80" width="64" height="64" rx="16" fill="#FFFFFF" stroke="url(#accent)" stroke-width="2" />
   <path d="M100 124V100h20M100 112h14M100 124l16-16" stroke="url(#accent)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-  <text x="80" y="330" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#F2EFEA">E-Cell VPKBIET</text>
-  <text x="80" y="400" font-family="Arial, sans-serif" font-size="34" fill="#A8A29B">Where Ideas Become Ventures</text>
+  <text x="80" y="330" font-family="Georgia, serif" font-size="72" font-weight="700" fill="#211D18">E-Cell VPKBIET</text>
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="34" fill="#5C564C">Where Ideas Become Ventures</text>
   <rect x="80" y="440" width="280" height="6" rx="3" fill="url(#accent)" />
 </svg>

@@ -9,26 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0908",
+        background: "#FAF8F4",
         surface: {
-          DEFAULT: "rgba(255,255,255,0.035)",
-          hover: "rgba(255,255,255,0.06)",
+          DEFAULT: "rgba(33,29,24,0.035)",
+          hover: "rgba(33,29,24,0.06)",
         },
         border: {
-          DEFAULT: "rgba(255,255,255,0.07)",
-          hover: "rgba(255,255,255,0.14)",
+          DEFAULT: "rgba(33,29,24,0.09)",
+          hover: "rgba(33,29,24,0.18)",
         },
         foreground: {
-          DEFAULT: "#F2EFEA",
-          muted: "#A8A29B",
-          subtle: "#78736C",
+          DEFAULT: "#211D18",
+          muted: "#5C564C",
+          subtle: "#8A8175",
         },
         accent: {
-          DEFAULT: "#D97757",
-          deep: "#9C4A2F",
-          soft: "#E5A585",
+          DEFAULT: "#9C4A2F",
+          deep: "#7A3A24",
+          soft: "#D97757",
         },
-        error: "#E0645A",
+        error: "#B23A2E",
       },
       fontFamily: {
         display: ["var(--font-display)", "sans-serif"],
@@ -40,18 +40,18 @@ const config: Config = {
         "display-md": ["clamp(2rem, 3.5vw, 3rem)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
       },
       backgroundImage: {
-        "accent-gradient": "linear-gradient(90deg, #E08A63 0%, #B85C3E 100%)",
-        "accent-gradient-radial": "radial-gradient(circle, #E08A63 0%, #B85C3E 100%)",
+        "accent-gradient": "linear-gradient(90deg, #B85C3E 0%, #7A3A24 100%)",
+        "accent-gradient-radial": "radial-gradient(circle, #B85C3E 0%, #7A3A24 100%)",
         "mesh-gradient":
-          "radial-gradient(at 20% 10%, rgba(217,119,87,0.08) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(156,74,47,0.10) 0px, transparent 50%), radial-gradient(at 90% 80%, rgba(217,119,87,0.05) 0px, transparent 50%), radial-gradient(at 10% 90%, rgba(156,74,47,0.06) 0px, transparent 50%)",
+          "radial-gradient(at 20% 10%, rgba(156,74,47,0.07) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(122,58,36,0.08) 0px, transparent 50%), radial-gradient(at 90% 80%, rgba(156,74,47,0.05) 0px, transparent 50%), radial-gradient(at 10% 90%, rgba(122,58,36,0.05) 0px, transparent 50%)",
         noise: "url('/noise.svg')",
       },
       boxShadow: {
-        glow: "0 0 32px -10px rgba(217,119,87,0.35)",
-        "glow-sm": "0 0 16px -6px rgba(217,119,87,0.4)",
+        glow: "0 14px 30px -10px rgba(122,58,36,0.22)",
+        "glow-sm": "0 8px 18px -6px rgba(122,58,36,0.24)",
       },
       dropShadow: {
-        glow: "0 0 10px rgba(217,119,87,0.4)",
+        glow: "0 4px 10px rgba(122,58,36,0.25)",
       },
       animation: {
         marquee: "marquee 32s linear infinite",

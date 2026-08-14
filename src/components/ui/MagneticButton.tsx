@@ -38,7 +38,7 @@ export default function MagneticButton({
 
   const baseClasses =
     variant === "primary"
-      ? "bg-accent-gradient text-background shadow-glow hover:shadow-[0_0_50px_-6px_rgba(139,92,246,0.65)]"
+      ? "bg-accent-gradient text-background shadow-glow hover:shadow-[0_16px_32px_-10px_rgba(122,58,36,0.4)]"
       : "glass glass-hover text-foreground";
 
   const Comp = href ? "a" : "button";

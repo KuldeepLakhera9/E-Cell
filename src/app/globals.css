@@ -13,15 +13,15 @@ html {
 }
 
 body {
-  color: #f2efea;
-  background-color: #0a0908;
+  color: #211d18;
+  background-color: #faf8f4;
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(217, 119, 87, 0.3);
-  color: #ffffff;
+  background: rgba(156, 74, 47, 0.18);
+  color: #211d18;
 }
 
 /* Scrollbar */
@@ -29,12 +29,12 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0908;
+  background: #faf8f4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #6b3823;
+  background: #c99274;
   border-radius: 999px;
-  border: 2px solid #0a0908;
+  border: 2px solid #faf8f4;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #9c4a2f;
@@ -46,17 +46,17 @@ body {
   }
 
   .text-gradient {
-    background-image: linear-gradient(90deg, #e08a63 0%, #b85c3e 100%);
+    background-image: linear-gradient(90deg, #b85c3e 0%, #7a3a24 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.035);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(33, 29, 24, 0.08);
   }
 
   .glass-hover {
@@ -67,14 +67,14 @@ body {
   }
 
   .glass-hover:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: rgba(217, 119, 87, 0.28);
-    box-shadow: 0 8px 30px -12px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(156, 74, 47, 0.25);
+    box-shadow: 0 12px 32px -14px rgba(33, 29, 24, 0.22);
   }
 
   .grid-texture {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(33, 29, 24, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(33, 29, 24, 0.045) 1px, transparent 1px);
     background-size: 56px 56px;
   }
 

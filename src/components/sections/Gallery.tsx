@@ -47,14 +47,14 @@ export default function Gallery() {
                   <GalleryArt seed={item.id} className="h-full w-full" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
-                <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-background/60 text-foreground opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
                   <Maximize2 size={14} />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 p-4 text-left">
-                  <p className="font-display text-sm font-semibold text-foreground sm:text-base">
+                  <p className="font-display text-sm font-semibold text-white sm:text-base">
                     {item.title}
                   </p>
-                  <p className="text-xs text-foreground-muted">{item.event}</p>
+                  <p className="text-xs text-white/70">{item.event}</p>
                 </div>
               </button>
             </StaggerItem>
