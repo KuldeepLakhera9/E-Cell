@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight, Clock, MapPin } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import FilterTabs from "@/components/ui/FilterTabs";
 import EventCover from "@/components/ui/EventCover";
@@ -79,9 +79,17 @@ export default function Events() {
                     {featured.title}
                   </h3>
                   <p className="mt-4 text-foreground-muted">{featured.description}</p>
-                  <div className="mt-4 flex items-center gap-1.5 text-sm text-foreground-subtle">
-                    <MapPin size={14} />
-                    {featured.location}
+                  <div className="mt-4 flex flex-col gap-2 text-sm text-foreground-subtle sm:flex-row sm:items-center sm:gap-4">
+                    <div className="flex items-center gap-1.5">
+                      <MapPin size={14} />
+                      {featured.location}
+                    </div>
+                    {featured.time && (
+                      <div className="flex items-center gap-1.5">
+                        <Clock size={14} />
+                        {featured.time}
+                      </div>
+                    )}
                   </div>
                   <div className="mt-8">
                     <MagneticButton>

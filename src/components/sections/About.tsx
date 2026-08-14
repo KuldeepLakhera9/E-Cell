@@ -34,12 +34,37 @@ const PILLARS = [
 ];
 
 const MILESTONES = [
-  { year: "2019", title: "E-Cell Founded", description: "Started with 12 students and one mission: make Baramati build." },
-  { year: "2021", title: "First Ideathon", description: "Ideathon Baramati drew 300+ participants across 40 colleges." },
-  { year: "2022", title: "25 Startups Mentored", description: "Our incubation support crossed its first major milestone." },
-  { year: "2023", title: "State Recognition", description: "Ranked among Maharashtra's top campus E-Cells by MSInS." },
-  { year: "2024", title: "Startup Summit Launched", description: "Flagship 3-day summit with 500+ attendees and 20+ speakers." },
-  { year: "2026", title: "200+ Active Members", description: "Grew into VPKBIET's largest student-run organization." },
+  {
+    year: "2024",
+    title: "E-Cell VPKBIET Founded",
+    description:
+      "Our journey began with a small group of students determined to build a culture of entrepreneurship on campus.",
+  },
+  {
+    year: "2025",
+    title: "EUREKA 2K25",
+    description:
+      "Our flagship event EUREKA made its debut, bringing ideation, mentorship, and competition to students across VPKBIET.",
+  },
+  {
+    year: "2025",
+    title: "24-Hour Hackathon",
+    description:
+      "A full day-and-night hackathon challenged teams to design, build, and pitch a working prototype in 24 hours.",
+  },
+  {
+    year: "2025",
+    title: "Many More Events",
+    description:
+      "Alongside our flagship events, we ran a growing calendar of workshops, speaker sessions, and networking meetups through the year.",
+  },
+  {
+    year: "2026",
+    title: "EUREKA 2K26",
+    description:
+      "Our flagship event returns bigger than before — happening now, marking the next chapter for E-Cell VPKBIET.",
+    current: true,
+  },
 ];
 
 export default function About() {
@@ -123,14 +148,15 @@ export default function About() {
                 const isEven = i % 2 === 0;
                 return (
                   <div
-                    key={milestone.year}
+                    key={milestone.title}
                     className="relative grid grid-cols-1 items-center gap-4 sm:grid-cols-2 sm:gap-10"
                   >
-                    <div
-                      className={cn(
-                        "absolute left-4 top-1.5 h-3 w-3 -translate-x-1/2 rounded-full bg-accent-gradient shadow-glow-sm sm:left-1/2",
+                    <div className="absolute left-4 top-1.5 -translate-x-1/2 sm:left-1/2">
+                      {milestone.current && (
+                        <span className="absolute inset-0 h-3 w-3 animate-ping rounded-full bg-accent-cyan/60" />
                       )}
-                    />
+                      <span className="relative block h-3 w-3 rounded-full bg-accent-gradient shadow-glow-sm" />
+                    </div>
                     <RevealOnScroll
                       direction={isEven ? "left" : "right"}
                       className={cn(
@@ -138,10 +164,23 @@ export default function About() {
                         isEven ? "sm:col-start-1 sm:pr-14 sm:text-right" : "sm:col-start-2 sm:pl-14"
                       )}
                     >
-                      <div className="glass glass-hover inline-block rounded-2xl px-6 py-5 text-left">
-                        <span className="text-gradient font-display text-sm font-bold tracking-wider">
-                          {milestone.year}
-                        </span>
+                      <div
+                        className={cn(
+                          "glass glass-hover inline-block rounded-2xl px-6 py-5 text-left",
+                          milestone.current && "border-accent-cyan/40"
+                        )}
+                      >
+                        <div className="flex items-center gap-2">
+                          <span className="text-gradient font-display text-sm font-bold tracking-wider">
+                            {milestone.year}
+                          </span>
+                          {milestone.current && (
+                            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-cyan/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent-cyan">
+                              <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
+                              Happening Now
+                            </span>
+                          )}
+                        </div>
                         <h4 className="mt-1 font-display text-lg font-semibold text-foreground">
                           {milestone.title}
                         </h4>

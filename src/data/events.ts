@@ -9,6 +9,7 @@ export interface EventItem {
   month: string;
   day: string;
   year: string;
+  time?: string;
   description: string;
   location: string;
   icon: EventIcon;
@@ -16,16 +17,17 @@ export interface EventItem {
 
 export const EVENTS: EventItem[] = [
   {
-    slug: "startup-summit-2026",
-    title: "Startup Summit 2026",
+    slug: "eureka-2k26",
+    title: "EUREKA 2K26",
     status: "upcoming",
     featured: true,
-    month: "MAR",
-    day: "14",
+    month: "AUG",
+    day: "24",
     year: "2026",
+    time: "9:00 AM onwards",
     description:
-      "Our flagship 3-day conference bringing together 500+ students, 20+ founders, and top VCs for talks, workshops, and a live pitch finale.",
-    location: "VPKBIET Auditorium, Baramati",
+      "Our flagship innovation summit returns — a day of talks, workshops, and competitions bringing together students, mentors, and founders under one roof.",
+    location: "Seminar Hall, VP SPCOEAI",
     icon: "rocket",
   },
   {
