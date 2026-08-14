@@ -24,7 +24,6 @@ export default function FilterTabs<T extends string>({
         <button
           key={option}
           onClick={() => onChange(option)}
-          data-cursor-hover
           className={cn(
             "relative rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300",
             active === option ? "text-background" : "text-foreground-muted hover:text-foreground"

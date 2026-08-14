@@ -117,7 +117,7 @@ export default function Events() {
                       className="h-44 transition-transform duration-700 ease-out-expo group-hover:scale-105"
                     />
                     <div className="absolute left-4 top-4 flex flex-col items-center rounded-xl border border-border bg-background/80 px-3 py-1.5 backdrop-blur-md">
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-accent-cyan">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-accent">
                         {event.month}
                       </span>
                       <span className="font-display text-lg font-bold leading-none text-foreground">
@@ -137,8 +137,7 @@ export default function Events() {
                       {event.location}
                     </div>
                     <button
-                      data-cursor-hover
-                      className="group/btn mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent-cyan transition-colors hover:text-accent-violet"
+                      className="group/btn mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent transition-colors hover:text-accent-deep"
                     >
                       {status === "upcoming" ? "Register" : "View Details"}
                       <ArrowRight

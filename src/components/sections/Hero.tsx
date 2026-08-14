@@ -58,7 +58,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-medium text-foreground-muted backdrop-blur-md"
         >
-          <Users size={14} className="text-accent-cyan" />
+          <Users size={14} className="text-accent" />
           Official Entrepreneurship Cell of VPKBIET
         </motion.div>
 
@@ -124,7 +124,6 @@ export default function Hero() {
       <motion.button
         onClick={() => scrollToSection("about")}
         aria-label="Scroll to About section"
-        data-cursor-hover
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1.6 }}

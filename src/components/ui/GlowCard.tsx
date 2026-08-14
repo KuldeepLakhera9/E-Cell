@@ -24,7 +24,7 @@ export default function GlowCard({ children, className }: GlowCardProps) {
       ref={ref}
       onMouseMove={handleMouseMove}
       className={cn(
-        "group relative overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-accent-violet/40 hover:shadow-glow",
+        "group relative overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-accent-deep/40 hover:shadow-glow",
         className
       )}
     >

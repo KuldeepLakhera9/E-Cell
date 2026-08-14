@@ -59,8 +59,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`E-Cell VPKBIET on ${label}`}
-                  data-cursor-hover
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors duration-300 hover:border-accent-cyan/40 hover:text-accent-cyan"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors duration-300 hover:border-accent/40 hover:text-accent"
                 >
                   <Icon size={15} />
                 </a>
@@ -77,8 +76,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    data-cursor-hover
-                    className="text-sm text-foreground-muted transition-colors hover:text-accent-cyan"
+                    className="text-sm text-foreground-muted transition-colors hover:text-accent"
                   >
                     {link.label}
                   </button>
@@ -96,8 +94,7 @@ export default function Footer() {
                 <li key={`${link.label}-${i}`}>
                   <button
                     onClick={() => scrollToSection(link.id)}
-                    data-cursor-hover
-                    className="text-sm text-foreground-muted transition-colors hover:text-accent-cyan"
+                    className="text-sm text-foreground-muted transition-colors hover:text-accent"
                   >
                     {link.label}
                   </button>
@@ -125,21 +122,20 @@ export default function Footer() {
                   placeholder="your@email.com"
                   aria-label="Email for newsletter"
                   className={cn(
-                    "w-full min-w-0 rounded-full border border-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent-cyan/50 focus:outline-none"
+                    "w-full min-w-0 rounded-full border border-border bg-surface px-4 py-2.5 text-sm text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent/50 focus:outline-none"
                   )}
                 />
                 <button
                   type="submit"
                   aria-label="Subscribe to newsletter"
-                  data-cursor-hover
                   className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent-gradient text-background transition-transform duration-300 hover:scale-105 active:scale-95"
                 >
                   {subscribed ? <CheckCircle2 size={16} /> : <ArrowRight size={16} />}
                 </button>
               </div>
-              {error && <p className="mt-2 text-xs text-accent-magenta">{error}</p>}
+              {error && <p className="mt-2 text-xs text-error">{error}</p>}
               {subscribed && (
-                <p className="mt-2 text-xs text-accent-cyan">Subscribed! Welcome aboard.</p>
+                <p className="mt-2 text-xs text-accent">Subscribed! Welcome aboard.</p>
               )}
             </form>
           </div>

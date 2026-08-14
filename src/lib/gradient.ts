@@ -9,7 +9,7 @@ export function hashString(str: string) {
 
 export function getGradientHues(seed: string) {
   const hash = hashString(seed);
-  const hue1 = 185 + (hash % 45);
-  const hue2 = hue1 + 60 + (hash % 25);
+  const hue1 = 8 + (hash % 22);
+  const hue2 = hue1 + 12 + (hash % 18);
   return { hue1, hue2 };
 }

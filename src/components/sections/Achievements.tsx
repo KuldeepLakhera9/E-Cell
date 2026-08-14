@@ -62,7 +62,7 @@ export default function Achievements() {
             onMouseLeave={() => setPaused(false)}
             className="glass relative mx-auto max-w-3xl overflow-hidden rounded-3xl p-8 sm:p-12"
           >
-            <Quote className="absolute right-8 top-8 text-accent-violet/20" size={64} strokeWidth={1.5} />
+            <Quote className="absolute right-8 top-8 text-accent-deep/20" size={64} strokeWidth={1.5} />
 
             <div className="relative min-h-[220px] sm:min-h-[180px]">
               <AnimatePresence mode="wait" custom={direction}>
@@ -98,7 +98,6 @@ export default function Achievements() {
                       setIndex(i);
                     }}
                     aria-label={`Go to testimonial ${i + 1}`}
-                    data-cursor-hover
                     className={`h-1.5 rounded-full transition-all duration-300 ${
                       i === index ? "w-6 bg-accent-gradient" : "w-1.5 bg-border hover:bg-border-hover"
                     }`}
@@ -109,16 +108,14 @@ export default function Achievements() {
                 <button
                   onClick={() => go(-1)}
                   aria-label="Previous testimonial"
-                  data-cursor-hover
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors hover:border-accent-cyan/40 hover:text-accent-cyan"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors hover:border-accent/40 hover:text-accent"
                 >
                   <ChevronLeft size={18} />
                 </button>
                 <button
                   onClick={() => go(1)}
                   aria-label="Next testimonial"
-                  data-cursor-hover
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors hover:border-accent-cyan/40 hover:text-accent-cyan"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors hover:border-accent/40 hover:text-accent"
                 >
                   <ChevronRight size={18} />
                 </button>

@@ -23,9 +23,8 @@ export default function Sponsors() {
           {SPONSORS.map((sponsor) => (
             <StaggerItem key={sponsor.name} direction="scale">
               <div
-                data-cursor-hover
                 className={cn(
-                  "group flex h-32 flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-surface px-6 text-center transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-accent-violet/40 hover:shadow-glow"
+                  "group flex h-32 flex-col items-center justify-center gap-2 rounded-2xl border border-border bg-surface px-6 text-center transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-accent-deep/40 hover:shadow-glow"
                 )}
               >
                 <span className="font-display text-lg font-bold text-foreground-subtle transition-all duration-300 group-hover:bg-accent-gradient group-hover:bg-clip-text group-hover:text-transparent sm:text-xl">

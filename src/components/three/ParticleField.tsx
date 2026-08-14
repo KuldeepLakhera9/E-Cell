@@ -42,11 +42,11 @@ function ParticleSwarm({ count }: { count: number }) {
       <Points ref={pointsRef} positions={positions} stride={3} frustumCulled>
         <PointMaterial
           transparent
-          color="#8B5CF6"
-          size={0.028}
+          color="#D97757"
+          size={0.024}
           sizeAttenuation
           depthWrite={false}
-          opacity={0.85}
+          opacity={0.7}
           blending={THREE.AdditiveBlending}
         />
       </Points>
@@ -65,7 +65,7 @@ function Wireframe() {
   return (
     <mesh ref={ref}>
       <icosahedronGeometry args={[2.6, 1]} />
-      <meshBasicMaterial color="#22D3EE" wireframe transparent opacity={0.12} />
+      <meshBasicMaterial color="#B85C3E" wireframe transparent opacity={0.1} />
     </mesh>
   );
 }

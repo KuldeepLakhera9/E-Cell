@@ -119,7 +119,7 @@ export default function About() {
             {PILLARS.map((pillar) => (
               <StaggerItem key={pillar.title}>
                 <GlowCard className="h-full">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface text-accent-cyan transition-colors duration-300 group-hover:border-accent-violet/40 group-hover:text-accent-violet">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface text-accent transition-colors duration-300 group-hover:border-accent-deep/40 group-hover:text-accent-deep">
                     <pillar.icon size={20} />
                   </div>
                   <h4 className="mt-5 font-display text-lg font-semibold text-foreground">
@@ -142,7 +142,7 @@ export default function About() {
           </RevealOnScroll>
 
           <div className="relative mt-16">
-            <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-accent-cyan/60 via-accent-violet/60 to-transparent sm:left-1/2 sm:-translate-x-1/2" />
+            <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-accent/60 via-accent-deep/60 to-transparent sm:left-1/2 sm:-translate-x-1/2" />
             <div className="flex flex-col gap-10 sm:gap-4">
               {MILESTONES.map((milestone, i) => {
                 const isEven = i % 2 === 0;
@@ -153,7 +153,7 @@ export default function About() {
                   >
                     <div className="absolute left-4 top-1.5 -translate-x-1/2 sm:left-1/2">
                       {milestone.current && (
-                        <span className="absolute inset-0 h-3 w-3 animate-ping rounded-full bg-accent-cyan/60" />
+                        <span className="absolute inset-0 h-3 w-3 animate-ping rounded-full bg-accent/60" />
                       )}
                       <span className="relative block h-3 w-3 rounded-full bg-accent-gradient shadow-glow-sm" />
                     </div>
@@ -167,7 +167,7 @@ export default function About() {
                       <div
                         className={cn(
                           "glass glass-hover inline-block rounded-2xl px-6 py-5 text-left",
-                          milestone.current && "border-accent-cyan/40"
+                          milestone.current && "border-accent/40"
                         )}
                       >
                         <div className="flex items-center gap-2">
@@ -175,8 +175,8 @@ export default function About() {
                             {milestone.year}
                           </span>
                           {milestone.current && (
-                            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-cyan/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent-cyan">
-                              <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan" />
+                            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent">
+                              <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                               Happening Now
                             </span>
                           )}

@@ -61,8 +61,7 @@ export default function Lightbox({ items, index, onClose, onNavigate }: Lightbox
           <button
             onClick={onClose}
             aria-label="Close lightbox"
-            data-cursor-hover
-            className="absolute right-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-foreground transition-colors hover:border-accent-violet/40 hover:text-accent-violet"
+            className="absolute right-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-foreground transition-colors hover:border-accent-deep/40 hover:text-accent-deep"
           >
             <X size={18} />
           </button>
@@ -73,8 +72,7 @@ export default function Lightbox({ items, index, onClose, onNavigate }: Lightbox
               onNavigate((index! - 1 + items.length) % items.length);
             }}
             aria-label="Previous image"
-            data-cursor-hover
-            className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-foreground transition-colors hover:border-accent-cyan/40 hover:text-accent-cyan sm:left-6"
+            className="absolute left-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-foreground transition-colors hover:border-accent/40 hover:text-accent sm:left-6"
           >
             <ChevronLeft size={20} />
           </button>
@@ -84,8 +82,7 @@ export default function Lightbox({ items, index, onClose, onNavigate }: Lightbox
               onNavigate((index! + 1) % items.length);
             }}
             aria-label="Next image"
-            data-cursor-hover
-            className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-foreground transition-colors hover:border-accent-cyan/40 hover:text-accent-cyan sm:right-6"
+            className="absolute right-3 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-surface text-foreground transition-colors hover:border-accent/40 hover:text-accent sm:right-6"
           >
             <ChevronRight size={20} />
           </button>

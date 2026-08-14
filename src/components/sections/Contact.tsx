@@ -84,9 +84,9 @@ export default function Contact() {
                     onChange={handleChange("name")}
                     placeholder="Aarav Deshmukh"
                     aria-invalid={!!errors.name}
-                    className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent-cyan/50 focus:outline-none"
+                    className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent/50 focus:outline-none"
                   />
-                  {errors.name && <p className="mt-1.5 text-xs text-accent-magenta">{errors.name}</p>}
+                  {errors.name && <p className="mt-1.5 text-xs text-error">{errors.name}</p>}
                 </div>
                 <div className="sm:col-span-1">
                   <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground-muted">
@@ -99,9 +99,9 @@ export default function Contact() {
                     onChange={handleChange("email")}
                     placeholder="you@example.com"
                     aria-invalid={!!errors.email}
-                    className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent-cyan/50 focus:outline-none"
+                    className="w-full rounded-xl border border-border bg-surface px-4 py-3 text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent/50 focus:outline-none"
                   />
-                  {errors.email && <p className="mt-1.5 text-xs text-accent-magenta">{errors.email}</p>}
+                  {errors.email && <p className="mt-1.5 text-xs text-error">{errors.email}</p>}
                 </div>
                 <div className="sm:col-span-2">
                   <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground-muted">
@@ -114,9 +114,9 @@ export default function Contact() {
                     onChange={handleChange("message")}
                     placeholder="Tell us what you're looking for..."
                     aria-invalid={!!errors.message}
-                    className="w-full resize-none rounded-xl border border-border bg-surface px-4 py-3 text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent-cyan/50 focus:outline-none"
+                    className="w-full resize-none rounded-xl border border-border bg-surface px-4 py-3 text-foreground placeholder:text-foreground-subtle/60 transition-colors duration-300 focus:border-accent/50 focus:outline-none"
                   />
-                  {errors.message && <p className="mt-1.5 text-xs text-accent-magenta">{errors.message}</p>}
+                  {errors.message && <p className="mt-1.5 text-xs text-error">{errors.message}</p>}
                 </div>
               </div>
 
@@ -159,8 +159,7 @@ export default function Contact() {
                     <p className="text-sm font-medium text-foreground-subtle">Email us</p>
                     <a
                       href={`mailto:${SITE.email}`}
-                      data-cursor-hover
-                      className="font-display text-lg font-semibold text-foreground transition-colors hover:text-accent-cyan"
+                      className="font-display text-lg font-semibold text-foreground transition-colors hover:text-accent"
                     >
                       {SITE.email}
                     </a>
@@ -188,8 +187,7 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`E-Cell VPKBIET on ${label}`}
-                      data-cursor-hover
-                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors duration-300 hover:border-accent-violet/40 hover:text-accent-violet"
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground-muted transition-colors duration-300 hover:border-accent-deep/40 hover:text-accent-deep"
                     >
                       <Icon size={16} />
                     </a>
@@ -202,7 +200,7 @@ export default function Contact() {
                 <div className="absolute inset-0 bg-mesh-gradient" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="relative flex flex-col items-center gap-2">
-                    <span className="absolute h-16 w-16 animate-ping rounded-full bg-accent-violet/20" />
+                    <span className="absolute h-16 w-16 animate-ping rounded-full bg-accent-deep/20" />
                     <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-accent-gradient shadow-glow">
                       <MapPin size={20} className="text-background" />
                     </span>

@@ -28,7 +28,7 @@ export default function EventCover({ title, icon, className, iconSize = 32 }: Ev
     <div
       className={cn("relative flex items-center justify-center overflow-hidden", className)}
       style={{
-        background: `radial-gradient(circle at 25% 25%, hsl(${hue1} 70% 20%) 0%, hsl(${hue2} 60% 12%) 60%, #05060a 100%)`,
+        background: `radial-gradient(circle at 25% 25%, hsl(${hue1} 55% 18%) 0%, hsl(${hue2} 45% 11%) 60%, #0A0908 100%)`,
       }}
     >
       <div className="absolute inset-0 grid-texture opacity-30" />

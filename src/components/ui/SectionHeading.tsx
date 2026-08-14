@@ -25,8 +25,13 @@ export default function SectionHeading({
       )}
     >
       <RevealOnScroll direction="fade">
-        <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-accent-cyan">
-          <span className="h-1.5 w-1.5 rounded-full bg-accent-cyan shadow-glow-cyan" />
+        <span
+          className={cn(
+            "inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-accent",
+            align === "center" ? "justify-center" : "justify-start"
+          )}
+        >
+          <span className="h-px w-6 bg-accent/50" />
           {eyebrow}
         </span>
       </RevealOnScroll>

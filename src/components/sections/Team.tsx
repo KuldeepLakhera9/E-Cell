@@ -68,8 +68,7 @@ export default function Team() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${member.name} on LinkedIn`}
-                        data-cursor-hover
-                        className="text-foreground-subtle transition-colors duration-300 hover:text-accent-cyan"
+                        className="text-foreground-subtle transition-colors duration-300 hover:text-accent"
                       >
                         <LinkedinIcon size={16} />
                       </a>
@@ -80,7 +79,6 @@ export default function Team() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${member.name} on GitHub`}
-                        data-cursor-hover
                         className="text-foreground-subtle transition-colors duration-300 hover:text-foreground"
                       >
                         <GithubIcon size={16} />
@@ -92,8 +90,7 @@ export default function Team() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${member.name} on Instagram`}
-                        data-cursor-hover
-                        className="text-foreground-subtle transition-colors duration-300 hover:text-accent-violet"
+                        className="text-foreground-subtle transition-colors duration-300 hover:text-accent-deep"
                       >
                         <InstagramIcon size={16} />
                       </a>
@@ -104,8 +101,7 @@ export default function Team() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${member.name} on Twitter`}
-                        data-cursor-hover
-                        className="text-foreground-subtle transition-colors duration-300 hover:text-accent-magenta"
+                        className="text-foreground-subtle transition-colors duration-300 hover:text-accent-deep"
                       >
                         <TwitterIcon size={16} />
                       </a>

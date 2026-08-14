@@ -18,13 +18,12 @@ export default function Accordion({ items }: { items: FaqItem[] }) {
             key={item.question}
             className={cn(
               "glass overflow-hidden rounded-2xl transition-colors duration-300",
-              isOpen && "border-accent-violet/30"
+              isOpen && "border-accent-deep/30"
             )}
           >
             <button
               onClick={() => setOpenIndex(isOpen ? null : i)}
               aria-expanded={isOpen}
-              data-cursor-hover
               className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
             >
               <span

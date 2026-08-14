@@ -40,7 +40,6 @@ export default function Gallery() {
             >
               <button
                 onClick={() => setActiveIndex(i)}
-                data-cursor-hover
                 aria-label={`Open photo: ${item.title}`}
                 className="group relative block h-full w-full overflow-hidden rounded-2xl border border-border"
               >

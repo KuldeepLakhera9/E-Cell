@@ -7,8 +7,8 @@ export default function Logo({ className }: { className?: string }) {
         <svg width="18" height="18" viewBox="0 0 64 64" fill="none">
           <defs>
             <linearGradient id="logo-g" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stopColor="#22D3EE" />
-              <stop offset="1" stopColor="#8B5CF6" />
+              <stop offset="0" stopColor="#E08A63" />
+              <stop offset="1" stopColor="#9C4A2F" />
             </linearGradient>
           </defs>
           <path

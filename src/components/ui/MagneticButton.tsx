@@ -51,7 +51,6 @@ export default function MagneticButton({
       animate={{ x: pos.x, y: pos.y }}
       transition={{ type: "spring", stiffness: 150, damping: 12, mass: 0.3 }}
       className="inline-block"
-      data-cursor-hover
     >
       <Comp
         href={href}
