@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { InstagramIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/SocialIcons";
+import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "@/components/ui/SocialIcons";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Avatar from "@/components/ui/Avatar";
 import FilterTabs from "@/components/ui/FilterTabs";
@@ -52,7 +52,7 @@ export default function Team() {
                 transition={{ duration: 0.4, delay: i * 0.04, ease: [0.16, 1, 0.3, 1] }}
                 className="glass glass-hover group overflow-hidden rounded-2xl p-3"
               >
-                <Avatar name={member.name} />
+                <Avatar name={member.name} photo={member.photo} />
                 <div className="px-1.5 pb-1 pt-4">
                   <h3 className="font-display text-base font-semibold text-foreground sm:text-lg">
                     {member.name}
@@ -69,6 +69,18 @@ export default function Team() {
                         className="text-foreground-subtle transition-colors duration-300 hover:text-accent-cyan"
                       >
                         <LinkedinIcon size={16} />
+                      </a>
+                    )}
+                    {member.github && (
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${member.name} on GitHub`}
+                        data-cursor-hover
+                        className="text-foreground-subtle transition-colors duration-300 hover:text-foreground"
+                      >
+                        <GithubIcon size={16} />
                       </a>
                     )}
                     {member.instagram && (

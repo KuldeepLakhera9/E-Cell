@@ -1,4 +1,4 @@
-import { SiInstagram, SiX, SiYoutube } from "@icons-pack/react-simple-icons";
+import { SiGithub, SiInstagram, SiX, SiYoutube } from "@icons-pack/react-simple-icons";
 
 interface IconProps {
   size?: number;
@@ -33,4 +33,8 @@ export function TwitterIcon({ size = 16, className }: IconProps) {
 
 export function YoutubeIcon({ size = 16, className }: IconProps) {
   return <SiYoutube size={size} className={className} color="currentColor" />;
+}
+
+export function GithubIcon({ size = 16, className }: IconProps) {
+  return <SiGithub size={size} className={className} color="currentColor" />;
 }

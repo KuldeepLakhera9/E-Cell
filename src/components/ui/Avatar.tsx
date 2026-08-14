@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { getGradientHues } from "@/lib/gradient";
 
@@ -8,18 +12,42 @@ function getInitials(name: string) {
 
 interface AvatarProps {
   name: string;
+  photo?: string;
   className?: string;
   rounded?: "full" | "2xl";
 }
 
-export default function Avatar({ name, className, rounded = "2xl" }: AvatarProps) {
+export default function Avatar({ name, photo, className, rounded = "2xl" }: AvatarProps) {
   const { hue1, hue2 } = getGradientHues(name);
+  const roundedClass = rounded === "full" ? "rounded-full" : "rounded-2xl";
+  const [imageFailed, setImageFailed] = useState(false);
+
+  if (photo && !imageFailed) {
+    return (
+      <div
+        className={cn(
+          "relative aspect-square w-full overflow-hidden",
+          roundedClass,
+          className
+        )}
+      >
+        <Image
+          src={photo}
+          alt={name}
+          fill
+          sizes="(max-width: 640px) 50vw, 25vw"
+          className="object-cover"
+          onError={() => setImageFailed(true)}
+        />
+      </div>
+    );
+  }
 
   return (
     <div
       className={cn(
         "relative flex aspect-square w-full items-center justify-center overflow-hidden",
-        rounded === "full" ? "rounded-full" : "rounded-2xl",
+        roundedClass,
         className
       )}
       style={{

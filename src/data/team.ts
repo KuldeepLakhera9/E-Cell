@@ -4,7 +4,9 @@ export interface TeamMember {
   name: string;
   role: string;
   category: TeamCategory;
+  photo?: string;
   linkedin?: string;
+  github?: string;
   instagram?: string;
   twitter?: string;
 }
@@ -40,6 +42,15 @@ export const TEAM: TeamMember[] = [
     instagram: "https://instagram.com",
   },
   {
+    name: "Kuldeep Lakhera",
+    role: "Tech Lead",
+    category: "Leads",
+    photo: "/team/kuldeep-lakhera.jpg",
+    linkedin: "https://www.linkedin.com/in/kuldeep-lakhera-a78373290/",
+    github: "https://github.com/KuldeepLakhera9",
+    instagram: "https://www.instagram.com/kuldeeplakhera_/",
+  },
+  {
     name: "Aditya Shinde",
     role: "Events Lead",
     category: "Leads",
@@ -59,13 +70,6 @@ export const TEAM: TeamMember[] = [
     category: "Leads",
     linkedin: "https://linkedin.com",
     instagram: "https://instagram.com",
-  },
-  {
-    name: "Ananya Rane",
-    role: "Tech Lead",
-    category: "Leads",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
   },
   {
     name: "Yash Pawar",
