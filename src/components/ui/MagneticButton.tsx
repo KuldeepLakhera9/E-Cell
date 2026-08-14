@@ -9,6 +9,8 @@ interface MagneticButtonProps {
   className?: string;
   onClick?: () => void;
   href?: string;
+  target?: string;
+  rel?: string;
   variant?: "primary" | "ghost";
   as?: ElementType;
   type?: "button" | "submit";
@@ -19,6 +21,8 @@ export default function MagneticButton({
   className,
   onClick,
   href,
+  target,
+  rel,
   variant = "primary",
   type = "button",
 }: MagneticButtonProps) {
@@ -54,6 +58,8 @@ export default function MagneticButton({
     >
       <Comp
         href={href}
+        target={href ? target : undefined}
+        rel={href ? rel : undefined}
         type={!href ? type : undefined}
         onClick={onClick}
         className={cn(

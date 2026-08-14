@@ -92,7 +92,11 @@ export default function Events() {
                     )}
                   </div>
                   <div className="mt-8">
-                    <MagneticButton>
+                    <MagneticButton
+                      href={status === "upcoming" ? featured.registerUrl : undefined}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {status === "upcoming" ? "Register Now" : "View Details"}
                       <ArrowRight size={16} />
                     </MagneticButton>
@@ -136,15 +140,30 @@ export default function Events() {
                       <MapPin size={12} />
                       {event.location}
                     </div>
-                    <button
-                      className="group/btn mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent transition-colors hover:text-accent-deep"
-                    >
-                      {status === "upcoming" ? "Register" : "View Details"}
-                      <ArrowRight
-                        size={14}
-                        className="transition-transform duration-300 group-hover/btn:translate-x-1"
-                      />
-                    </button>
+                    {status === "upcoming" && event.registerUrl ? (
+                      <a
+                        href={event.registerUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/btn mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent transition-colors hover:text-accent-deep"
+                      >
+                        Register
+                        <ArrowRight
+                          size={14}
+                          className="transition-transform duration-300 group-hover/btn:translate-x-1"
+                        />
+                      </a>
+                    ) : (
+                      <button
+                        className="group/btn mt-5 inline-flex items-center gap-1.5 self-start text-sm font-semibold text-accent transition-colors hover:text-accent-deep"
+                      >
+                        {status === "upcoming" ? "Register" : "View Details"}
+                        <ArrowRight
+                          size={14}
+                          className="transition-transform duration-300 group-hover/btn:translate-x-1"
+                        />
+                      </button>
+                    )}
                   </div>
                 </motion.div>
               ))}

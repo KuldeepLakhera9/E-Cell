@@ -13,6 +13,7 @@ export interface EventItem {
   description: string;
   location: string;
   icon: EventIcon;
+  registerUrl?: string;
 }
 
 export const EVENTS: EventItem[] = [
@@ -29,6 +30,7 @@ export const EVENTS: EventItem[] = [
       "Our flagship innovation summit returns — a day of talks, workshops, and competitions bringing together students, mentors, and founders under one roof.",
     location: "Seminar Hall, VP SPCOEAI",
     icon: "rocket",
+    registerUrl: "https://forms.gle/GdHV8QyhifBtvsDr5",
   },
   {
     slug: "pitch-perfect-6",
