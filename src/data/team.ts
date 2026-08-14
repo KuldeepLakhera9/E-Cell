@@ -13,6 +13,13 @@ export interface TeamMember {
 
 export const TEAM: TeamMember[] = [
   {
+    name: "Anand Kale",
+    role: "PR Lead",
+    category: "Leads",
+    photo: "/team/anand-kale.jpg",
+    linkedin: "https://linkedin.com",
+  },
+  {
     name: "Kuldeep Lakhera",
     role: "Tech Lead",
     category: "Leads",
@@ -34,13 +41,6 @@ export const TEAM: TeamMember[] = [
     role: "Content and Research Lead",
     category: "Leads",
     photo: "/team/priyanka-pawar.jpg",
-    linkedin: "https://linkedin.com",
-  },
-  {
-    name: "Anand Kale",
-    role: "PR Lead",
-    category: "Leads",
-    photo: "/team/anand-kale.jpg",
     linkedin: "https://linkedin.com",
   },
   {
