@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import GalleryArt from "./GalleryArt";
@@ -96,9 +97,18 @@ export default function Lightbox({ items, index, onClose, onNavigate }: Lightbox
             onClick={(e) => e.stopPropagation()}
             className="relative flex w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-border"
           >
-            <div className="relative aspect-[4/3] w-full sm:aspect-video">
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-black/40 sm:aspect-video">
               {loading ? (
                 <div className="absolute inset-0 animate-pulse bg-surface-hover" />
+              ) : item.image ? (
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 80vw"
+                  className="object-contain"
+                  priority
+                />
               ) : (
                 <GalleryArt seed={item.id} className="absolute inset-0" />
               )}

@@ -4,22 +4,44 @@ export interface GalleryItem {
   id: string;
   title: string;
   event: string;
+  image: string;
   size: GallerySize;
 }
 
 export const GALLERY: GalleryItem[] = [
-  { id: "g1", title: "Opening Keynote", event: "Startup Summit 2025", size: "large" },
-  { id: "g2", title: "Team Brainstorm", event: "Ideathon Baramati", size: "normal" },
-  { id: "g3", title: "Investor Panel", event: "Startup Summit 2025", size: "tall" },
-  { id: "g4", title: "Pitch in Progress", event: "Pitch Perfect 5.0", size: "normal" },
-  { id: "g5", title: "Crowd Energy", event: "Startup Summit 2025", size: "wide" },
-  { id: "g6", title: "Late Night Build", event: "Bootcamp: Zero to MVP", size: "normal" },
-  { id: "g7", title: "Winners on Stage", event: "Pitch Perfect 5.0", size: "normal" },
-  { id: "g8", title: "Fireside Chat", event: "Founder Talks S3", size: "tall" },
-  { id: "g9", title: "Networking Break", event: "Investor Connect Meet", size: "normal" },
-  { id: "g10", title: "Prototype Demo", event: "Design Sprint Weekend", size: "wide" },
-  { id: "g11", title: "Team Huddle", event: "Ideathon Baramati", size: "normal" },
-  { id: "g12", title: "Closing Ceremony", event: "Startup Summit 2025", size: "normal" },
-  { id: "g13", title: "Whiteboard Session", event: "Bootcamp: Zero to MVP", size: "normal" },
-  { id: "g14", title: "Founder Q&A", event: "Founder Talks S3", size: "normal" },
+  {
+    id: "g1",
+    title: "E-Cell VPKBIET Team 2025-26",
+    event: "Official Team Induction",
+    image: "/images/gallery/gallery-team-steps-1.jpg",
+    size: "large",
+  },
+  {
+    id: "g2",
+    title: "Innovation & Prototyping Lab",
+    event: "Quantum AI & 3D Printing Lab",
+    image: "/images/gallery/gallery-quantum-lab.jpg",
+    size: "tall",
+  },
+  {
+    id: "g3",
+    title: "VPKBIET Innovation Hub",
+    event: "Center of Excellence",
+    image: "/images/gallery/gallery-campus-wide.jpg",
+    size: "tall",
+  },
+  {
+    id: "g4",
+    title: "Entrepreneurs in the Making",
+    event: "Campus Assembly",
+    image: "/images/gallery/gallery-team-steps-2.jpg",
+    size: "wide",
+  },
+  {
+    id: "g5",
+    title: "Core Leads Cohort",
+    event: "Leadership Meet",
+    image: "/images/gallery/gallery-leads-outdoor.jpg",
+    size: "wide",
+  },
 ];

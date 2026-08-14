@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Maximize2 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import GalleryArt from "@/components/ui/GalleryArt";
@@ -30,7 +31,7 @@ export default function Gallery() {
 
         <StaggerGroup
           staggerDelay={0.06}
-          className="mt-14 grid grid-cols-2 gap-4 sm:auto-rows-[160px] sm:grid-cols-4"
+          className="mt-14 grid grid-cols-2 gap-4 sm:auto-rows-[180px] sm:grid-cols-4"
         >
           {GALLERY.map((item, i) => (
             <StaggerItem
@@ -43,8 +44,18 @@ export default function Gallery() {
                 aria-label={`Open photo: ${item.title}`}
                 className="group relative block h-full w-full overflow-hidden rounded-2xl border border-border"
               >
-                <div className="absolute inset-0 transition-transform duration-700 ease-out-expo group-hover:scale-110">
-                  <GalleryArt seed={item.id} className="h-full w-full" />
+                <div className="absolute inset-0 transition-transform duration-700 ease-out-expo group-hover:scale-105">
+                  {item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      className="object-cover transition-transform duration-700 ease-out-expo group-hover:scale-105"
+                    />
+                  ) : (
+                    <GalleryArt seed={item.id} className="h-full w-full" />
+                  )}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
                 <div className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/40 text-white opacity-0 backdrop-blur-md transition-opacity duration-300 group-hover:opacity-100">
